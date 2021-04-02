@@ -1,3 +1,7 @@
+h2 {
+    margin: 30px 0 20px 15px;
+}
+
 .header-reception {
     width: 100%;
     display: flex;
@@ -7,7 +11,7 @@
         height: 65px;
         img  {
             display: block;
-            margin: auto;
+            margin: auto; 
         }
     }
     &__localisation {
@@ -15,11 +19,23 @@
         align-items: center;
         justify-content: center;
         height: 50px;
-        background-color: #eaeaea;
-        i {
-            color: gray;
-            margin-right: 5px;
+        background-color: #eaeaea;     
+        box-shadow: 0 2px 2px 0 #cfcfcf inset;
+        input {
+            width: 150px;
+            border: transparent;
+            background-color: #eaeaea;
+            font-size: 1em;
+            font-weight: bold;
+            outline: none;
         }
+        i {
+            color: #4b4b4b;
+            margin-right: 10px;
+        }
+        ::placeholder { 
+            color:#4b4b4b;
+         }
     }
     &__intro {
         display: flex;
@@ -35,6 +51,99 @@
         p {
             width: 80%;
             margin-bottom: 20px;
+        }
+    }
+}
+
+.running {
+    &__step {
+        display: flex;
+        align-items: center;
+        height: 75px;
+        width: 90%;
+        margin: 0 auto 25px auto;
+        .numero {
+            position: absolute;
+            display: flex;
+            border: transparent;
+            background-color: $primarycolor;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+        .container {
+            display: flex;
+            position: relative;
+            height: 100%;
+            width: 96%;
+            left: 4%;
+            border-radius: 15px;
+            box-shadow: 0 5px 12px 0 rgba(0,0,0,0.20);
+            align-items: center;
+            justify-content: flex-start;
+            font-size: 1.1em;
+            font-weight: bold;
+            i { 
+                margin: 0 20px 0 40px;
+            }
+            .fas {
+                color: #7e7e7e;
+            }
+            .fa-store  {
+                color: $primarycolor;
+            }
+            &__third {
+                background-color: #f5edff;
+            }
+        }
+    }    
+}
+
+main {
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;    
+    }
+}
+
+.restaurant {
+    width: 90%;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 0.2em #e2e2e2;
+    margin: 15px;
+    position: relative;
+    .fresh {
+        position: absolute;
+        background-color: $tertiarycolor;
+        color: #008766;
+        top: 10px;
+        right: 10px;
+        padding: 3px 5px;
+    }
+    img {
+        width: 100%;
+        height: 175px;
+        object-fit: cover;
+        border-radius: 15px 15px 0 0;
+    }
+    figcaption {
+        margin: 15px;
+        display: flex;
+        justify-content: space-between;
+        .btn-like {
+            border: transparent;
+            background-color: white;
+            font-size: 20px;
         }
     }
 }

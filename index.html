@@ -17,7 +17,8 @@
             <img src="./img/logo/ohmyfood@2x.svg" alt="Ohmyfood" role="logo" >
         </div>
         <div class="header-reception__localisation">
-            <i class="fas fa-map-marker-alt"></i><p>Paris, Belleville</p>
+            <i class="fas fa-map-marker-alt"></i>
+            <input type="text" placeholder="Paris, Belleville">
         </div>
         <article class="header-reception__intro">
             <h1>Réservez le menu qui vous convient </h1>
@@ -25,23 +26,94 @@
             <button class="btn">Explorer nos restaurants</button>
         </article>
     </header>
-    
-    <section class="running">
+
+    <article class="running">
         <h2>Fonctionnement</h2>
-        <article class="running__step">
+        <div class="running__step">
+            <div class="numero">1</div>
+            <div class="container">
+                <i class="fas fa-mobile-alt"></i><p>Choisissez un restaurant</p>
+            </div>
+        </div>
+        <div class="running__step">
+            <div class="numero">2</div>
+            <div class="container">
+                <i class="fas fa-list-ul"></i><p>Composez votre menu</p>
+            </div>
+        </div>
+        <div class="running__step">
+            <div class="numero">3</div>
+            <div class="container container__third">
+                <i class="fas fa-store"></i><p>Dégustez au restaurant</p>
+            </div>
+        </div>
+    </article>
 
-        </article>
-        <article class="running__step">
-
-        </article>
-        <article class="running__step">
-
-        </article>
-    </section>
-
-    <main class="restaurant">
+    <main>
         <h2>restaurants</h2>
+        <article>
+                <figure class="restaurant restaurant__fresh">
+                    <a href="#">
+                        <div class="fresh">Nouveau</div>
+                        <img src="./img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="plat du restaurant">
+                    </a>
+                    <figcaption>
+                        <div class="text-restaurant">
+                            <h3>Le délice des sens</h3>
+                            <p>Folie-Méricourt</p>
+                        </div>
+                        <button class="btn-like">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </figcaption>          
+                </figure>
+                <figure class="restaurant restaurant__fresh">
+                    <a href="#">
+                        <div class="fresh">Nouveau</div>
+                        <img src="./img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="plat du restaurant">
+                    </a>
+                    <figcaption>
+                        <div class="text-restaurant">
+                            <h3>Le délice des sens</h3>
+                            <p>Folie-Méricourt</p>
+                        </div>
+                        <button class="btn-like">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </figcaption>          
+                </figure>
+            </figure>
+            <figure class="restaurant">
+                <a href="#">
+                    <img src="./img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="plat du restaurant">
+                </a>
+                <figcaption>
+                    <div class="text-restaurant">
+                        <h3>A la française</h3>
+                        <p>Cité rouge</p>
+                    </div>
+                    <button class="btn-like">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </figcaption>          
+            </figure>
+            <figure class="restaurant">
+                <a href="#">
+                    <img src="./img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="plat du restaurant">
+                </a>
+                <figcaption>
+                    <div class="text-restaurant">
+                        <h3>Le délice des sens</h3>
+                        <p>Folie-Méricourt</p>
+                    </div>
+                    <button class="btn-like">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </figcaption>          
+            </figure>
+        </article>
     </main>
+    
 
     <footer class="footer">
         <h4>Ohmyfood</h4>
