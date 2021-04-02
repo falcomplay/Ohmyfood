@@ -8,7 +8,11 @@
     box-shadow: 0 5px 12px 0 rgba(0,0,0,0.50);
     outline: none;
 }
-
+@mixin btn-like {
+    border: transparent;
+    background-color: white;
+    outline: none;
+} 
 /*
 @mixin featureframe {
     .running__step {

@@ -318,6 +318,7 @@ main article {
 .restaurant figcaption .btn-like {
   border: transparent;
   background-color: white;
+  outline: none;
   font-size: 20px;
 }
 
@@ -343,6 +344,101 @@ main article {
 }
 
 .background_menu {
+  width: 115%;
+  margin-left: -10%;
+}
+
+.main_menu {
   width: 100%;
+  overflow: hidden;
+}
+
+.main_menu article {
+  margin-top: -60px;
+  border-radius: 25px 25px 0px 0px;
+  background-color: #f6f6f6;
+  position: relative;
+}
+
+.title_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 85%;
+  padding: 20px 0;
+}
+
+.title_menu h1 {
+  font-family: 'Shrikhand', cursive;
+}
+
+.title_menu .btn-like {
+  border: transparent;
+  background-color: white;
+  outline: none;
+  font-size: 20px;
+}
+
+.card-container {
+  width: 100%;
+}
+
+.card-container h2 {
+  text-transform: uppercase;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.container .frame {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 93%;
+  height: 60px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 5px 0.2em #e2e2e2;
+          box-shadow: 0 0 5px 0.2em #e2e2e2;
+  border-radius: 15px;
+  margin: 10px auto;
+}
+
+.container .frame .dish_description {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+  padding: 0px 15px 0px 15px;
 }
 /*# sourceMappingURL=main.css.map */

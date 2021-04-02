@@ -14,5 +14,64 @@
 }
 
 .background_menu {
+    width: 115%;
+    margin-left: -10%;
+}
+
+.main_menu {
     width: 100%;
+    overflow: hidden;
+    article {
+        margin-top: -60px;
+        border-radius: 25px 25px 0px 0px;
+        background-color: #f6f6f6;
+        position: relative;
+    }
+}
+.title_menu {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    padding: 20px 0;
+    h1 {
+        font-family: 'Shrikhand', cursive;
+    }
+    .btn-like {
+        @include btn-like;
+        font-size: 20px;
+    }
+}
+
+.card-container {
+    width: 100%;
+    h2 {
+        text-transform: uppercase;
+    }
+    
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    .frame {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 93%;
+        height: 60px;
+        background-color: #fff;
+        box-shadow: 0 0 5px 0.2em #e2e2e2;
+        border-radius: 15px;
+        margin: 10px auto;
+        .dish_description {
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            overflow: hidden;
+            padding: 0px 15px 0px 15px;
+        }
+    }
 }

@@ -141,8 +141,7 @@ main {
         display: flex;
         justify-content: space-between;
         .btn-like {
-            border: transparent;
-            background-color: white;
+            @include btn-like;
             font-size: 20px;
         }
     }
