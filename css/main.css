@@ -390,7 +390,7 @@ main article {
   text-transform: uppercase;
 }
 
-.container {
+.container_menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -404,7 +404,7 @@ main article {
   width: 100%;
 }
 
-.container .frame {
+.container_menu .frame {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -427,7 +427,7 @@ main article {
   margin: 10px auto;
 }
 
-.container .frame .dish_description {
+.container_menu .frame .dish_description {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
