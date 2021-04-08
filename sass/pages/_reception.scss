@@ -1,10 +1,6 @@
-h2 {
-	margin: 30px 0 10px 20px;
-}
-
 .header-reception {
 	h2 {
-		margin-bottom: 32px;
+		margin: 30px 0 10px 32px;
 	}
 	width: 100%;
 	display: flex;
@@ -67,15 +63,17 @@ h2 {
 		display: flex;
 		align-items: center;
 		height: 68px;
-		width: 90%;
+		width: 85%;
 		margin: 0 auto 25px auto;
-		font-size: 15px;
+		background-color: #f6f6f6;
+		border-radius: 15px;
+		box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+		font-size: 17px;
+		font-weight: bold;
 		.numero {
-			position: absolute;
 			display: flex;
 			border: transparent;
 			background-color: $primarycolor;
-			font-family: "Roboto", sans-serif;
 			font-size: 14px;
 			color: white;
 			width: 25px;
@@ -83,44 +81,31 @@ h2 {
 			border-radius: 50%;
 			align-items: center;
 			justify-content: center;
-			z-index: 10;
+			margin-left: -12px;
 		}
-		.container {
-			display: flex;
-			position: relative;
-			height: 100%;
-			width: 96%;
-			left: 4%;
-			background-color: #f6f6f6;
-			border-radius: 15px;
-			box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
-			align-items: center;
-			justify-content: flex-start;
-			font-size: 1.1em;
-			font-weight: bold;
-			i {
-				margin: 0 20px 0 40px;
-			}
-			.fas {
-				color: #7e7e7e;
-			}
-			.fa-store {
-				color: $primarycolor;
-			}
-			&__third {
-				background-color: #f5edff;
-			}
+		i {
+			margin: 0 20px 0 20px;
+			font-size: 20px;
+		}
+		.fas {
+			color: #7e7e7e;
+		}
+		.fa-store {
+			color: $primarycolor;
+		}
+		&__third {
+			background-color: #f5edff;
 		}
 	}
 }
 
-main {
+.main_reception {
 	background-color: #f6f6f6;
 	display: flex;
 	flex-direction: column;
 	padding-bottom: 20px;
 	h2 {
-		margin-top: 50px;
+		margin: 50px 0 10px 20px;
 	}
 	article {
 		display: flex;
