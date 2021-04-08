@@ -1,20 +1,28 @@
 @mixin btn {
-    width: 220px;
-    height: 50px;
-    background:  linear-gradient( $secundarycolor, $primarycolor);
-    color: white;
-    border: transparent;
-    border-radius: 25px;
-    box-shadow: 0 5px 12px 0 rgba(0,0,0,0.50);
-    outline: none;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+	width: 220px;
+	height: 50px;
+	background: linear-gradient($secundarycolor, $primarycolor);
+	color: white;
+	border: transparent;
+	border-radius: 25px;
+	box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.5);
+	outline: none;
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+	&:hover {
+		opacity: 0.8;
+		box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.8);
+	}
 }
+
+// fonction lighten ? combiné ligthen + linear-gradient ? @return color ?
+
 @mixin btn-like {
-    border: transparent;
-    background-color: white;
-    outline: none;
-} 
+	border: transparent;
+	background-color: white;
+	outline: none;
+}
+
 /*
 @mixin featureframe {
     .running__step {

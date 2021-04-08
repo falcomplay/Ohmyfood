@@ -33,18 +33,27 @@
     }    
 }
 */
-h1, h2, h3, p, a {
-  font-family: 'Roboto', sans-serif;
+h1,
+h2,
+h3,
+p,
+a {
+  font-family: "Roboto", sans-serif;
 }
 
 h4 {
-  font-family: 'Shrikhand', cursive;
+  font-family: "Shrikhand", cursive;
   font-size: 25px;
 }
 
-body, * {
+body,
+* {
   margin: 0;
   padding: 0;
+}
+
+ul {
+  list-style: none;
 }
 
 a {
@@ -62,8 +71,14 @@ a {
   -webkit-box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.5);
   outline: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  -webkit-box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.8);
+          box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.8);
 }
 
 .footer {
@@ -78,17 +93,27 @@ a {
   background-color: #353535;
 }
 
-.footer h4, .footer a {
-  color: white;
-  margin: 5px 0;
+.footer img {
+  width: 100px;
+  margin-bottom: 10px;
 }
 
-.footer i {
-  margin-right: 5px;
+.footer a,
+.footer li {
+  color: white;
+  margin: 7px 0;
+}
+
+.footer .fa-utensils {
+  margin-right: 10px;
+}
+
+.footer .fa-hands-helping {
+  margin-right: 4px;
 }
 
 h2 {
-  margin: 30px 0 20px 15px;
+  margin: 30px 0 10px 20px;
 }
 
 .header-reception {
@@ -102,6 +127,10 @@ h2 {
           flex-direction: column;
 }
 
+.header-reception h2 {
+  margin-bottom: 32px;
+}
+
 .header-reception__logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -112,6 +141,7 @@ h2 {
 .header-reception__logo img {
   display: block;
   margin: auto;
+  width: 160px;
 }
 
 .header-reception__localisation {
@@ -124,7 +154,7 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 50px;
+  height: 60px;
   background-color: #eaeaea;
   -webkit-box-shadow: 0 2px 2px 0 #cfcfcf inset;
           box-shadow: 0 2px 2px 0 #cfcfcf inset;
@@ -140,8 +170,8 @@ h2 {
 }
 
 .header-reception__localisation i {
-  color: #4b4b4b;
-  margin-right: 10px;
+  color: #353535;
+  margin: 0 15px;
 }
 
 .header-reception__localisation ::-webkit-input-placeholder {
@@ -172,7 +202,7 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  padding: 30px 0;
+  padding: 40px 0 50px 0;
   background-color: #f6f6f6;
 }
 
@@ -182,8 +212,14 @@ h2 {
 }
 
 .header-reception__intro p {
-  width: 80%;
+  width: 85%;
   margin-bottom: 20px;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.running {
+  height: 400px;
 }
 
 .running__step {
@@ -193,9 +229,10 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 75px;
+  height: 68px;
   width: 90%;
   margin: 0 auto 25px auto;
+  font-size: 15px;
 }
 
 .running__step .numero {
@@ -205,6 +242,8 @@ h2 {
   display: flex;
   border: transparent;
   background-color: #9356DC;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
   color: white;
   width: 25px;
   height: 25px;
@@ -226,9 +265,10 @@ h2 {
   height: 100%;
   width: 96%;
   left: 4%;
+  background-color: #f6f6f6;
   border-radius: 15px;
-  -webkit-box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -264,6 +304,11 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-bottom: 20px;
+}
+
+main h2 {
+  margin-top: 50px;
 }
 
 main article {
@@ -286,17 +331,25 @@ main article {
   border-radius: 15px;
   -webkit-box-shadow: 0 5px 0.2em #e2e2e2;
           box-shadow: 0 5px 0.2em #e2e2e2;
-  margin: 15px;
+  margin: 10px 15px;
   position: relative;
+}
+
+.restaurant h3 {
+  margin-bottom: 5px;
 }
 
 .restaurant .fresh {
   position: absolute;
+  font-family: "Roboto", sans-serif;
   background-color: #99E2D0;
+  border-radius: 2px;
   color: #008766;
   top: 10px;
-  right: 10px;
-  padding: 3px 5px;
+  right: 15px;
+  padding: 5px 12px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .restaurant img {
@@ -304,11 +357,18 @@ main article {
   height: 175px;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
   border-radius: 15px 15px 0 0;
 }
 
+.restaurant .img_center {
+  -o-object-position: 0 60%;
+     object-position: 0 60%;
+}
+
 .restaurant figcaption {
-  margin: 15px;
+  padding: 10px 15px 15px 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -322,6 +382,7 @@ main article {
   background-color: white;
   outline: none;
   font-size: 20px;
+  font-weight: 300;
 }
 
 .header__menu {
@@ -376,7 +437,7 @@ main article {
 }
 
 .title_menu h1 {
-  font-family: 'Shrikhand', cursive;
+  font-family: "Shrikhand", cursive;
 }
 
 .title_menu .btn-like {
@@ -447,7 +508,7 @@ main article {
 }
 
 .container_menu .frame .dish_description .dish_price {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
 

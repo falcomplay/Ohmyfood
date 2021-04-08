@@ -7,9 +7,9 @@
         opacity: 0.8;
         font-size: 20px;
     }
-    img  {
+    img {
         display: block;
-        margin: auto; 
+        margin: auto;
     }
 }
 
@@ -18,7 +18,6 @@
     height: 280px;
     object-fit: cover;
 }
-
 .main_menu {
     width: 100%;
     overflow: hidden;
@@ -35,7 +34,7 @@
     width: 85%;
     padding: 20px 0;
     h1 {
-        font-family: 'Shrikhand', cursive;
+        font-family: "Shrikhand", cursive;
     }
     .btn-like {
         @include btn-like;
@@ -48,7 +47,6 @@
     h2 {
         text-transform: uppercase;
     }
-    
 }
 .container_menu {
     display: flex;
@@ -74,7 +72,7 @@
             overflow: hidden;
             padding: 0px 15px 0px 15px;
             .dish_price {
-                font-family: 'Roboto', sans-serif;
+                font-family: "Roboto", sans-serif;
                 font-weight: bold;
             }
         }

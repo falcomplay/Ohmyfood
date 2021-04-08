@@ -1,14 +1,21 @@
 .footer {
-    display: flex;
-    flex-direction: column;
-    padding: 25px;
-    background-color: #353535;
-    h4, a {
-        color: white;
-        margin: 5px 0;
-    }
-    i {
-        margin-right: 5px;
-    }
-    
+	display: flex;
+	flex-direction: column;
+	padding: 25px;
+	background-color: #353535;
+	img {
+		width: 100px;
+		margin-bottom: 10px;
+	}
+	a,
+	li {
+		color: white;
+		margin: 7px 0;
+	}
+	.fa-utensils {
+		margin-right: 10px;
+	}
+	.fa-hands-helping {
+		margin-right: 4px;
+	}
 }
