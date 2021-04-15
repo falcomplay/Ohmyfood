@@ -405,68 +405,62 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-animation: load 4s forwards;
-          animation: load 4s forwards;
+  -webkit-animation: load ease 4s forwards;
+          animation: load ease 4s forwards;
 }
 
 .load__point {
   width: 50px;
   height: 50px;
   border-radius: 25px;
-  opacity: 1;
   background: #9356dc;
   margin: 20px;
-  -webkit-animation: loadpoint 400ms backwards infinite ease-in-out alternate;
-          animation: loadpoint 400ms backwards infinite ease-in-out alternate;
+  -webkit-animation: loadpoint 400ms infinite ease-in-out alternate;
+          animation: loadpoint 400ms infinite ease-in-out alternate;
 }
 
 .load__point--1 {
   -webkit-animation-delay: 100ms;
           animation-delay: 100ms;
-  z-index: -1000;
 }
 
 .load__point--2 {
   -webkit-animation-delay: 200ms;
           animation-delay: 200ms;
-  z-index: -1000;
 }
 
 .load__point--3 {
   -webkit-animation-delay: 300ms;
           animation-delay: 300ms;
-  z-index: -1000;
 }
 
 .load__point--2 {
   background: #ff79da;
-  z-index: -1000;
 }
 
 .load__point--3 {
   background: #99e2d0;
-  z-index: -1000;
 }
 
 @-webkit-keyframes load {
   0%,
-  50% {
+  90% {
     opacity: 0.95;
   }
   100% {
     opacity: 0;
-    z-index: -1000;
+    z-index: -1;
   }
 }
 
 @keyframes load {
   0%,
-  50% {
+  90% {
     opacity: 0.95;
   }
   100% {
     opacity: 0;
-    z-index: -1000;
+    z-index: -1;
   }
 }
 
