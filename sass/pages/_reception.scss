@@ -151,11 +151,6 @@
 		padding: 10px 15px 15px 15px;
 		display: flex;
 		justify-content: space-between;
-		.btn-like {
-			@include btn-like;
-			font-size: 20px;
-			font-weight: 300;
-		}
 	}
 }
 .load {
@@ -176,7 +171,7 @@
 		border-radius: 25px;
 		background: $primarycolor;
 		margin: 20px;
-
+		opacity: 1;
 		animation: loadpoint 400ms infinite ease-in-out alternate;
 		@for $i from 1 through 3 {
 			&--#{$i} {
@@ -207,16 +202,7 @@
 	0% {
 		transform: translateY(0);
 	}
-	// 50% {
-	// 	transform: translateY();
-	// }
 	100% {
 		transform: translateY($shake-intensity);
 	}
 }
-
-// @for $i from 1 through 3 {
-// 	&--#{$i} {
-// 		animation-delay: $i * 1s;
-// 	}
-//

@@ -45,13 +45,14 @@
 			font-size: 28px;
 			margin-left: 20px;
 		}
-		.btn-like {
-			@include btn-like;
-		}
 	}
 	.btn {
 		margin: 35px auto 50px auto;
 		width: 185px;
+	}
+	.btn-like {
+		margin: auto;
+		width: 35px;
 	}
 }
 .card-container {
@@ -79,6 +80,13 @@
 	cursor: pointer;
 	overflow: hidden;
 	padding: 10px;
+	opacity: 0;
+	animation: popping-frames 1s forwards;
+	@for $i from 1 through 10 {
+		&--#{$i} {
+			animation-delay: $i * 100ms;
+		}
+	}
 	&__description {
 		width: 100%;
 		white-space: nowrap;
@@ -127,6 +135,7 @@
 			border-radius: 12.5px;
 			transform: rotate(180deg);
 			transition: transform 400ms;
+			transition-delay: 200ms;
 		}
 	}
 	&:hover &__check {
@@ -134,5 +143,14 @@
 	}
 	&:hover i {
 		transform: rotate(0);
+	}
+}
+
+@keyframes popping-frames {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }

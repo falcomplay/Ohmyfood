@@ -1,3 +1,68 @@
 .btn {
-    @include btn;
+	@include btn;
+}
+
+.btn-like {
+	fill: transparent;
+	stroke: rgba(100, 100, 100, 0.664);
+	stroke-width: 20;
+	cursor: pointer;
+	position: relative;
+
+	svg {
+		overflow: visible;
+		width: 40px;
+	}
+
+	path {
+		transform-origin: center;
+	}
+
+	.heart__background {
+		position: absolute;
+		left: 0;
+		right: 0;
+		z-index: -1;
+		stroke: none;
+	}
+
+	.heart__main:hover path {
+		animation: stroke-animation 2s ease-in-out forwards;
+	}
+
+	.heart__main:hover ~ .heart__background path {
+		animation: fade-animation 2s ease-in-out forwards;
+	}
+}
+
+@keyframes stroke-animation {
+	0% {
+		fill: transparent;
+	}
+	80% {
+		fill: $pink;
+	}
+	100% {
+		fill: $pink;
+		stroke-width: 0;
+	}
+}
+
+@keyframes fade-animation {
+	0% {
+		fill: transparent;
+		transform: scale(1);
+	}
+	50% {
+		fill: $pink-light;
+		transform: scale(1.1);
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		transform: scale(2);
+		opacity: 1;
+	}
 }

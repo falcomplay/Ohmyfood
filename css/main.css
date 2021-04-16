@@ -1,38 +1,3 @@
-/*
-@mixin featureframe {
-    .running__step {
-        width: 500px;
-        height: 50px;
-        background-color: white;
-        display: flex;
-        align-items: center;
-        .numero {
-            position: absolute;
-            display: flex;
-            border: transparent;
-            background-color: violet;
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            margin-left: 20px;
-            align-items: center;
-            justify-content: center;
-            left: 3%;
-            z-index: 10;
-        }
-        .container {
-            display: flex;
-            position: relative;
-            width: 400px;
-            height: 40px;
-            border: solid 2px black;
-            left: 15%;
-            align-items: center;
-            justify-content: center;
-        }
-    }    
-}
-*/
 h1,
 h2,
 h3,
@@ -75,6 +40,112 @@ a {
   opacity: 0.8;
   -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.8);
           box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.8);
+}
+
+.btn-like {
+  fill: transparent;
+  stroke: rgba(100, 100, 100, 0.664);
+  stroke-width: 20;
+  cursor: pointer;
+  position: relative;
+}
+
+.btn-like svg {
+  overflow: visible;
+  width: 40px;
+}
+
+.btn-like path {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.btn-like .heart__background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  stroke: none;
+}
+
+.btn-like .heart__main:hover path {
+  -webkit-animation: stroke-animation 2s ease-in-out forwards;
+          animation: stroke-animation 2s ease-in-out forwards;
+}
+
+.btn-like .heart__main:hover ~ .heart__background path {
+  -webkit-animation: fade-animation 2s ease-in-out forwards;
+          animation: fade-animation 2s ease-in-out forwards;
+}
+
+@-webkit-keyframes stroke-animation {
+  0% {
+    fill: transparent;
+  }
+  80% {
+    fill: #ff2581;
+  }
+  100% {
+    fill: #ff2581;
+    stroke-width: 0;
+  }
+}
+
+@keyframes stroke-animation {
+  0% {
+    fill: transparent;
+  }
+  80% {
+    fill: #ff2581;
+  }
+  100% {
+    fill: #ff2581;
+    stroke-width: 0;
+  }
+}
+
+@-webkit-keyframes fade-animation {
+  0% {
+    fill: transparent;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    fill: #ff7eb4;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-animation {
+  0% {
+    fill: transparent;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    fill: #ff7eb4;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 1;
+  }
 }
 
 .footer {
@@ -351,43 +422,6 @@ a {
           justify-content: space-between;
 }
 
-.restaurant figcaption .btn-like {
-  border: transparent;
-  background-color: white;
-  outline: none;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  overflow: hidden;
-  font-size: 20px;
-  font-weight: 300;
-}
-
-.restaurant figcaption .btn-like:hover::after {
-  -webkit-transform: scaleY(1);
-          transform: scaleY(1);
-}
-
-.restaurant figcaption .btn-like::after {
-  overflow: hidden;
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: red;
-  z-index: -1;
-  -webkit-transform: scaleY(0);
-          transform: scaleY(0);
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
-  -webkit-transform-origin: bottom;
-          transform-origin: bottom;
-}
-
 .load {
   position: fixed;
   height: 100%;
@@ -415,6 +449,7 @@ a {
   border-radius: 25px;
   background: #9356dc;
   margin: 20px;
+  opacity: 1;
   -webkit-animation: loadpoint 400ms infinite ease-in-out alternate;
           animation: loadpoint 400ms infinite ease-in-out alternate;
 }
@@ -559,44 +594,14 @@ a {
   margin-left: 20px;
 }
 
-.main_menu .title_menu .btn-like {
-  border: transparent;
-  background-color: white;
-  outline: none;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.main_menu .title_menu .btn-like:hover::after {
-  -webkit-transform: scaleY(1);
-          transform: scaleY(1);
-}
-
-.main_menu .title_menu .btn-like::after {
-  overflow: hidden;
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: red;
-  z-index: -1;
-  -webkit-transform: scaleY(0);
-          transform: scaleY(0);
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
-  -webkit-transform-origin: bottom;
-          transform-origin: bottom;
-}
-
 .main_menu .btn {
   margin: 35px auto 50px auto;
   width: 185px;
+}
+
+.main_menu .btn-like {
+  margin: auto;
+  width: 35px;
 }
 
 .card-container {
@@ -629,6 +634,59 @@ a {
   cursor: pointer;
   overflow: hidden;
   padding: 10px;
+  opacity: 0;
+  -webkit-animation: popping-frames 1s forwards;
+          animation: popping-frames 1s forwards;
+}
+
+.dish-frame--1 {
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+}
+
+.dish-frame--2 {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+
+.dish-frame--3 {
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+
+.dish-frame--4 {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+
+.dish-frame--5 {
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+
+.dish-frame--6 {
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+
+.dish-frame--7 {
+  -webkit-animation-delay: 700ms;
+          animation-delay: 700ms;
+}
+
+.dish-frame--8 {
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
+}
+
+.dish-frame--9 {
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
+}
+
+.dish-frame--10 {
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
 }
 
 .dish-frame__description {
@@ -713,6 +771,8 @@ a {
   transition: -webkit-transform 400ms;
   transition: transform 400ms;
   transition: transform 400ms, -webkit-transform 400ms;
+  -webkit-transition-delay: 200ms;
+          transition-delay: 200ms;
 }
 
 .dish-frame:hover .dish-frame__check {
@@ -722,5 +782,23 @@ a {
 .dish-frame:hover i {
   -webkit-transform: rotate(0);
           transform: rotate(0);
+}
+
+@-webkit-keyframes popping-frames {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes popping-frames {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=main.css.map */
