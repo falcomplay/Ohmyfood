@@ -52,7 +52,7 @@ a {
 
 .btn-like svg {
   overflow: visible;
-  width: 40px;
+  width: 30px;
 }
 
 .btn-like path {
@@ -282,7 +282,7 @@ a {
 }
 
 .running {
-  height: 400px;
+  margin-bottom: 20px;
 }
 
 .running__step {
@@ -336,8 +336,23 @@ a {
   color: #9356dc;
 }
 
-.running__step__third {
+.running__step--third {
   background-color: #f5edff;
+}
+
+@media screen and (min-width: 1024px) {
+  .running {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .main_reception {
@@ -484,7 +499,7 @@ a {
   }
   100% {
     opacity: 0;
-    z-index: -1;
+    z-index: -2;
   }
 }
 
@@ -495,7 +510,7 @@ a {
   }
   100% {
     opacity: 0;
-    z-index: -1;
+    z-index: -2;
   }
 }
 
@@ -600,7 +615,7 @@ a {
 }
 
 .main_menu .btn-like {
-  margin: auto;
+  margin-right: 20px;
   width: 35px;
 }
 
@@ -625,7 +640,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 80%;
+  width: 88%;
   background-color: #fff;
   -webkit-box-shadow: 0 0 5px 3px #e2e2e2;
           box-shadow: 0 0 5px 3px #e2e2e2;

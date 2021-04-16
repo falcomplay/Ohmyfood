@@ -58,7 +58,7 @@
 }
 
 .running {
-	height: 400px;
+	margin-bottom: 20px;
 	&__step {
 		display: flex;
 		align-items: center;
@@ -93,9 +93,14 @@
 		.fa-store {
 			color: $primarycolor;
 		}
-		&__third {
+		&--third {
 			background-color: #f5edff;
 		}
+	}
+	@media screen and (min-width: $medium) {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
 	}
 }
 
@@ -194,7 +199,7 @@
 	}
 	100% {
 		opacity: 0;
-		z-index: -1;
+		z-index: -2;
 	}
 }
 
