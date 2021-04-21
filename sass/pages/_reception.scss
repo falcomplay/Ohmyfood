@@ -97,10 +97,16 @@
 			background-color: #f5edff;
 		}
 	}
-	@media screen and (min-width: $medium) {
+	@media screen and (min-width: $desktop) {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
+		flex-wrap: wrap;
+		h2 {
+			flex: 0 1 100%;
+		}
+		&__step {
+			width: 25%;
+		}
 	}
 }
 
@@ -110,13 +116,25 @@
 	flex-direction: column;
 	padding-bottom: 20px;
 	h2 {
-		margin: 50px 0 10px 20px;
+		margin: 50px 0 20px 20px;
 	}
 	article {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		margin-bottom: 20px;
+	}
+	@media screen and (min-width: $tabloid) {
+		section {
+			display: grid;
+			grid-template-columns: 50% 50%;
+			max-width: 1200px;
+			margin: auto;
+			h2 {
+				grid-column-start: 1;
+				grid-column-end: 3;
+			}
+		}
 	}
 }
 
@@ -125,7 +143,7 @@
 	background-color: white;
 	border-radius: 15px;
 	box-shadow: 0 5px 0.2em #e2e2e2;
-	margin: 10px 15px;
+	margin: 10px auto;
 	position: relative;
 	h3 {
 		margin-bottom: 5px;
@@ -148,6 +166,9 @@
 		object-fit: cover;
 		object-position: bottom;
 		border-radius: 15px 15px 0 0;
+		@media screen and (min-width: $SP) {
+			object-position: 0 60%;
+		}
 	}
 	.img_center {
 		object-position: 0 60%;
@@ -169,7 +190,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	animation: load ease 4s forwards;
+	animation: load ease 3s forwards;
 	&__point {
 		width: 50px;
 		height: 50px;

@@ -69,13 +69,13 @@ a {
 }
 
 .btn-like .heart__main:hover path {
-  -webkit-animation: stroke-animation 2s ease-in-out forwards;
-          animation: stroke-animation 2s ease-in-out forwards;
+  -webkit-animation: stroke-animation 1s ease-in-out forwards;
+          animation: stroke-animation 1s ease-in-out forwards;
 }
 
 .btn-like .heart__main:hover ~ .heart__background path {
-  -webkit-animation: fade-animation 2s ease-in-out forwards;
-          animation: fade-animation 2s ease-in-out forwards;
+  -webkit-animation: fade-animation 1s ease-in-out forwards;
+          animation: fade-animation 1s ease-in-out forwards;
 }
 
 @-webkit-keyframes stroke-animation {
@@ -349,9 +349,16 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .running h2 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+  .running__step {
+    width: 25%;
   }
 }
 
@@ -368,7 +375,7 @@ a {
 }
 
 .main_reception h2 {
-  margin: 50px 0 10px 20px;
+  margin: 50px 0 20px 20px;
 }
 
 .main_reception article {
@@ -385,13 +392,29 @@ a {
   margin-bottom: 20px;
 }
 
+@media screen and (min-width: 768px) {
+  .main_reception section {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  .main_reception section h2 {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
 .restaurant {
   width: 90%;
   background-color: white;
   border-radius: 15px;
   -webkit-box-shadow: 0 5px 0.2em #e2e2e2;
           box-shadow: 0 5px 0.2em #e2e2e2;
-  margin: 10px 15px;
+  margin: 10px auto;
   position: relative;
 }
 
@@ -420,6 +443,13 @@ a {
   -o-object-position: bottom;
      object-position: bottom;
   border-radius: 15px 15px 0 0;
+}
+
+@media screen and (min-width: 414px) {
+  .restaurant img {
+    -o-object-position: 0 60%;
+       object-position: 0 60%;
+  }
 }
 
 .restaurant .img_center {
@@ -454,8 +484,8 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-animation: load ease 4s forwards;
-          animation: load ease 4s forwards;
+  -webkit-animation: load ease 3s forwards;
+          animation: load ease 3s forwards;
 }
 
 .load__point {
@@ -571,6 +601,12 @@ a {
      object-fit: cover;
 }
 
+@media screen and (min-width: 1024px) {
+  .background_menu {
+    height: 450px;
+  }
+}
+
 .main_menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -589,11 +625,11 @@ a {
 
 .main_menu .title_menu {
   width: 100%;
+  position: absolute;
   margin-top: -60px;
   border-radius: 30px 30px 0px 0px;
   background-color: #f6f6f6;
   padding: 20px 0 10px 0;
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -617,6 +653,23 @@ a {
 .main_menu .btn-like {
   margin-right: 20px;
   width: 35px;
+}
+
+@media screen and (min-width: 1024px) {
+  .main_menu {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 33% 33% 33%;
+        grid-template-columns: 33% 33% 33%;
+  }
+  .main_menu > :nth-child(2) {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+  }
+  .main_menu > :nth-child(5) {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+  }
 }
 
 .card-container {
