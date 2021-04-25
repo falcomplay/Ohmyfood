@@ -40,10 +40,10 @@
 		fill: transparent;
 	}
 	80% {
-		fill: $pink;
+		fill: #9356dc;
 	}
 	100% {
-		fill: $pink;
+		fill: #9356dc;
 		stroke-width: 0;
 	}
 }
@@ -54,7 +54,7 @@
 		transform: scale(1);
 	}
 	50% {
-		fill: $pink-light;
+		fill: pink;
 		transform: scale(1.1);
 		opacity: 1;
 	}

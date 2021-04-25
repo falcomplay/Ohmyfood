@@ -83,10 +83,10 @@ a {
     fill: transparent;
   }
   80% {
-    fill: #ff2581;
+    fill: #9356dc;
   }
   100% {
-    fill: #ff2581;
+    fill: #9356dc;
     stroke-width: 0;
   }
 }
@@ -96,10 +96,10 @@ a {
     fill: transparent;
   }
   80% {
-    fill: #ff2581;
+    fill: #9356dc;
   }
   100% {
-    fill: #ff2581;
+    fill: #9356dc;
     stroke-width: 0;
   }
 }
@@ -111,7 +111,7 @@ a {
             transform: scale(1);
   }
   50% {
-    fill: #ff7eb4;
+    fill: pink;
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
     opacity: 1;
@@ -133,7 +133,7 @@ a {
             transform: scale(1);
   }
   50% {
-    fill: #ff7eb4;
+    fill: pink;
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
     opacity: 1;
@@ -643,6 +643,13 @@ a {
   font-weight: 400;
   font-size: 28px;
   margin-left: 20px;
+}
+
+@media screen and (max-width: 360px) {
+  .main_menu .title_menu h1 {
+    font-size: 24px;
+    line-height: 100%;
+  }
 }
 
 .main_menu .btn {
